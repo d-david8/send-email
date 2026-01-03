@@ -1,0 +1,5 @@
+.DS_Store
+.env
+api/config/mail.php
+api/config/security.php
+PHPMailer

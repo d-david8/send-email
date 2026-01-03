@@ -36,6 +36,13 @@ MAIL_CONTACT_PASS="yourpassword"
 ```
 3. Configure API keys in config/security.php
 
+4. Installing PHPMailer
+
+- Download PHPMailer from [GitHub](https://github.com/PHPMailer/PHPMailer) → **Code → Download ZIP**.  
+- Unzip and rename `PHPMailer-master` → `PHPMailer`.  
+- Move the folder into your project root:
+
+---
 ## API Usage
 
 ### HEADERS
@@ -47,13 +54,13 @@ Content-Type: multipart/form-data
 
 ### Body Parameters
 
-| Name          | Type   | Description                           |
-| ------------- | ------ | ------------------------------------- |
-| `to`          | string | Recipient email                       |
-| `subject`     | string | Email subject (default: "No subject") |
-| `body`        | string | HTML content                          |
-| `from`        | string | Sender account key (default: "hello") |
-| `attachments` | file[] | Optional multiple files               |
+| Name            | Type   | Description                           |
+| --------------- | ------ | ------------------------------------- |
+| `to`            | string | Recipient email                       |
+| `subject`       | string | Email subject (default: "No subject") |
+| `body`          | string | HTML content                          |
+| `from`          | string | Sender account key (default: "hello") |
+| `attachments[]` | file[] | Optional multiple files               |
 
 ### curl
 
