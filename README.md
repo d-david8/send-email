@@ -22,7 +22,7 @@ A lightweight PHP API for sending emails using **multiple SMTP accounts**, with 
 git clone https://github.com/username/send-email.git
 cd send-email
 ```
-2. Create .env in root (send-email/.env) with your SMTP credentials:
+2. Create .env in root (send-email/.env) with your SMTP credentials, Host and Port:
 
 ```ini
 MAIL_HELLO_EMAIL="hello@domain.com"
@@ -33,6 +33,9 @@ MAIL_TEST_PASS="yourpassword"
 
 MAIL_CONTACT_EMAIL="contact@domain.com"
 MAIL_CONTACT_PASS="yourpassword"
+
+MAIL_HOST="mail.domain.com"
+MAIL_PORT=465
 ```
 3. Configure API keys in config/security.php
 
