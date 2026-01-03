@@ -39,6 +39,7 @@ class Mailer {
             $mail->isSMTP();
             $mail->Host = $this->host;
             $mail->SMTPAuth = true;
+            $mail->CharSet = 'UTF-8';
             $mail->Username = $account['email'];
             $mail->Password = $account['password'];
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
