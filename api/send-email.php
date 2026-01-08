@@ -11,6 +11,15 @@ $security = require __DIR__ . '/config/security.php';
 
 $headers = getallheaders();
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, X-API-KEY");
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
+
 $API_KEY =
     $headers['X-API-KEY']
     ?? $_SERVER['HTTP_X_API_KEY']
